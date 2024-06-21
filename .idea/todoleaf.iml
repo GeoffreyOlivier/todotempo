@@ -117,6 +117,20 @@
       <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/defuse/php-encryption" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/firebase/php-jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/laravel/passport" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/lcobucci/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/league/event" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/league/oauth2-server" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/league/uri" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/league/uri-interfaces" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/nyholm/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/paragonie/constant_time_encoding" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/phpseclib/phpseclib" />
+      <excludeFolder url="file://$MODULE_DIR$/todoleaf-api/vendor/symfony/psr-http-message-bridge" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
