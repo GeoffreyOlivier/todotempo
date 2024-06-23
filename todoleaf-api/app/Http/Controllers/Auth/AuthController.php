@@ -12,31 +12,28 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        Log::info("passs");
         $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required|string'
         ]);
 
-        Log::info(Auth::attempt($credentials));
-
+        // Tentative de connexion
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-            Log::info($user);
-            $token = $user->createToken('MyAppToken')->accessToken;
-            Log::info($token);
+
+            $tokenResult = $user->createToken('Personal Access Token');
+            $token = $tokenResult->accessToken;
+            $cookie = cookie('jwt', $token, 1440, '/', null, true, true, false, 'Strict');
 
             return response()->json([
                 'success' => true,
                 'token' => $token,
                 'user' => $user
             ]);
-        } else {
-            return response()->json([
-                'success' => false,
-                'message' => 'Unauthorized'
-            ], 401);
         }
+        return response()->json([
+            'message' => 'Unauthorized'
+        ], 401);
     }
 }
 

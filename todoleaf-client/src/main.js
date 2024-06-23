@@ -1,22 +1,26 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
 import App from './App.vue'
-import router from './router'
+import { router } from './router/router.js'
 import { useAuthStore } from "@/stores/auth.store.js"
+import { useCookies } from 'vue3-cookies';
 
 const app = createApp(App);
+const authStore = useAuthStore();
+const { cookies } = useCookies();
 
-const pinia = createPinia();
-app.use(pinia);
+app.use(createPinia());
 app.use(router);
 
-const authStore = useAuthStore();
-
-if (authStore.token) {
-    authStore.fetchUser();
-}
+useCookies({
+    expireTimes: "30d",
+    path: "/",
+    domain: "",
+    secure: true,
+    sameSite: "None"
+});
+authStore.jwt = cookies.get('jwt');
 
 app.mount('#app');
+
+
